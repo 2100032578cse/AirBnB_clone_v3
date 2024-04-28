@@ -31,7 +31,7 @@ def city_create(state_id):
     """
     create city route
     param: state_id - state id
-    :return: newly created city obj
+    :return: the newly created city object
     """
     city_json = request.get_json(silent=True)
     if city_json is None:
