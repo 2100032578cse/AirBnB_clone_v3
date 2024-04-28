@@ -11,7 +11,7 @@ from models.amenity import Amenity
 def amenity_get_all():
     """
     retrieves all Amenity objects
-    :return: json of all states
+    :return: json of the states(all)
     """
     am_list = []
     am_obj = storage.all("Amenity")
@@ -25,7 +25,7 @@ def amenity_get_all():
 def amenity_create():
     """
     create amenity route
-    :return: newly created amenity obj
+    :return: newly created amenity object
     """
     am_json = request.get_json(silent=True)
     if am_json is None:
