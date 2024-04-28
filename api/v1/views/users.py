@@ -10,7 +10,7 @@ from models.user import User
 @app_views.route("/users", methods=["GET"], strict_slashes=False)
 def user_get_all():
     """
-    retrieves all User objects
+    this rretrieve the all object users
     :return: json of all users
     """
     user_list = []
@@ -46,7 +46,7 @@ def user_create():
 @app_views.route("/users/<user_id>",  methods=["GET"], strict_slashes=False)
 def user_by_id(user_id):
     """
-    gets a specific User object by ID
+    gets a given User object by ID
     :param user_id: user object id
     :return: user obj with the specified id or error
     """
@@ -63,8 +63,8 @@ def user_by_id(user_id):
 def user_put(user_id):
     """
     updates specific User object by ID
-    :param user_id: user object ID
-    :return: user object and 200 on success, or 400 or 404 on failure
+    :param user_id: user object ID of class
+    :return: user object and 200 on success, or 400 or 404 on  thefailure
     """
     user_json = request.get_json(silent=True)
 
@@ -90,7 +90,7 @@ def user_delete_by_id(user_id):
     """
     deletes User by id
     :param user_id: user object id
-    :return: empty dict with 200 or 404 if not found
+    :return: empty dict with 200 or return 404 if not found
     """
 
     fetched_obj = storage.get("User", str(user_id))
