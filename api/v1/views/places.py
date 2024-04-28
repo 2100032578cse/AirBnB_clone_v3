@@ -12,7 +12,7 @@ from models.place import Place
 def places_by_city(city_id):
     """
     retrieves all Place objects by city
-    :return: json of all Places
+    :return: json of the Places(all)
     """
     place_list = []
     city_obj = storage.get("City", str(city_id))

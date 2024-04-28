@@ -14,8 +14,8 @@ from api.v1.views import app_views, storage
 def amenity_by_place(place_id):
     """
     get all amenities of a place
-    :param place_id: amenity id
-    :return: all amenities
+    :param place_id: the amenity id
+    :return: all amenities available
     """
     fetched_obj = storage.get("Place", str(place_id))
 

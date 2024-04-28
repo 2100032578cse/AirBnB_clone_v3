@@ -12,7 +12,7 @@ from models.review import Review
 def reviews_by_place(place_id):
     """
     retrieves all Review objects by place
-    :return: json of all reviews
+    :return: json of all reviews available
     """
     review_list = []
     place_obj = storage.get("Place", str(place_id))

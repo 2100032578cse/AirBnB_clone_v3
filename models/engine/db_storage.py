@@ -65,7 +65,8 @@ class DBStorage:
             id: The ID of the object to retrieve.
 
         Returns:
-            The object with the specified ID if found, otherwise returns None.
+            The object with the specified ID, otherwise
+            returns None if none is found.
         """
         all_class = self.all(cls)
 
@@ -86,7 +87,7 @@ class DBStorage:
 
         Returns:
             The number of objects of the specified class,
-            or all classes if none is provided.
+            else returns none.
         """
         return len(self.all(cls))
 
