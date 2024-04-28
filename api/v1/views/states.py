@@ -10,7 +10,7 @@ from models.state import State
 @app_views.route("/states", methods=["GET"], strict_slashes=False)
 def state_get_all():
     """
-    retrieves all State objects
+    all State objects will be retrieved
     :return: json of all states
     """
     state_list = []
@@ -25,7 +25,7 @@ def state_get_all():
 def state_create():
     """
     create state route
-    :return: newly created state obj
+    :return: state object that is newly created .
     """
     state_json = request.get_json(silent=True)
     if state_json is None:
@@ -45,7 +45,7 @@ def state_create():
 def state_by_id(state_id):
     """
     gets a specific State object by ID
-    :param state_id: state object id
+    :param state_id: the state object id
     :return: state obj with the specified id or error
     """
 
